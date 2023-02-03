@@ -1,0 +1,35 @@
+〇全体の流れ
+・nodeの最新LTSバージョンを調べる。
+https://nodejs.org/ja/
+・yarnの最新バージョンを調べる。
+https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
+・frontend-maven-pluginのinstall-node-and-yarnを使用する。
+・プロジェクトを右クリック > ローカル・ターミナルに表示 > ターミナル
+・ターミナルでpathを通す。
+set path=%path%;node\;node\yarn\dist\bin
+・ターミナルでyarn init -y
+・ターミナルでyarn add パッケージ名
+必要なパッケージをインストールしていく。
+
+〇yarn
+・yarn init
+初期化。設定ファイル等が作られる。
+・yarn add パッケージ名@x.x.x
+パッケージをインストール。
+・yarn install
+package.jsonとyarn.lockに従ってパッケージのインストールを行う。
+
+〇TypeScript
+・typescriptのインストール
+yarn add -D typescript
+・型情報のインストール。色々あるらしいが今回はnodeの定義情報を使うもの。バージョン(x.x.x)は使っているNodeに近いものを使う。
+yarn add -D typescript @types/node@x.x.x
+・tsconfig.jsonを作成する。
+yarn tsc --init
+・コンパイル
+yarn tscで実行される。
+tsconfig.jsonに以下を追加しておく。(同ファイルでcompilerOptions.rootDirを"./src/main/ts"と設定している場合)
+"include": [
+  "src/main/ts"
+]
+これがないと恐らくエラーになる。
