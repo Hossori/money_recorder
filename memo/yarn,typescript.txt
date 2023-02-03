@@ -10,21 +10,14 @@ set path=%path%;node\;node\yarn\dist\bin
 ・ターミナルでyarn init -y
 ・ターミナルでyarn add パッケージ名
 必要なパッケージをインストールしていく。
-
-〇yarn
-・yarn init
-初期化。設定ファイル等が作られる。
-・yarn add パッケージ名@x.x.x
-パッケージをインストール。
-・yarn install
-package.jsonとyarn.lockに従ってパッケージのインストールを行う。
+・作業の過程で作成されるnode_modulesディレクトリはgitの管理対象から外す。（node_modules/と記載する。）
 
 〇TypeScript
 ・typescriptのインストール
 yarn add -D typescript
 ・型情報のインストール。色々あるらしいが今回はnodeの定義情報を使うもの。バージョン(x.x.x)は使っているNodeに近いものを使う。
-yarn add -D typescript @types/node@x.x.x
-・tsconfig.jsonを作成する。
+yarn add -D @types/node@x.x.x
+・このコマンドでtsconfig.jsonを作成し、開いて編集する。
 yarn tsc --init
 ・コンパイル
 yarn tscで実行される。
