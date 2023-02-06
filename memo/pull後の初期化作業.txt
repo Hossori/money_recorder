@@ -1,0 +1,6 @@
+・node, yarnのパスを通す。
+システム環境変数のpathに相対パスを追加する。node\とnode\yarn\dist\bin\
+・node_modules(yarnでインストールしたtypescriptやdart-sassが入っている)を作る。
+git管理していないので、自分で作成する。
+プロジェクトを右クリック > ローカル・ターミナルに表示 > ターミナル を開き、yarn installを実行。
+package.jsonはgit管理しているため、単にyarn installと実行すれば必要なものがインストールされる。

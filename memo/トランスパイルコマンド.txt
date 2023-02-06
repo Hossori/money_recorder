@@ -1,0 +1,6 @@
+・yarn tsc
+src/main/tsのファイルをトランスパイルしてsrc/main/resources/static/jsに出力。
+詳細は\tsconfig.json
+・yarn scss
+sass src/main/scss:src/resources/static/cssを実行。
+詳細は\package.jsonのscripts
