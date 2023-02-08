@@ -4,11 +4,10 @@ https://nodejs.org/ja/
 ・yarnの最新バージョンを調べる。
 https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
 ・frontend-maven-pluginのinstall-node-and-yarnを使用する。
+・システム環境変数のPathに相対パスを追加する。node\とnode\yarn\dist\bin
 ・プロジェクトを右クリック > ローカル・ターミナルに表示 > ターミナル
-・ターミナルでpathを通す。
-set path=%path%;node\;node\yarn\dist\bin
 ・ターミナルでyarn init -y
-・ターミナルでyarn add パッケージ名
+・ターミナルでyarn add [-D] パッケージ名
 必要なパッケージをインストールしていく。
 ・作業の過程で作成されるnode_modulesディレクトリはgitの管理対象から外す。（node_modules/と記載する。）
 
