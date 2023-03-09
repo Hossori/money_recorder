@@ -1,0 +1,8 @@
+単体テストはJUnit(+Mockito)。
+SpringTestは結合テスト等を自動化するときに使うことになる。
+
+・DBUnit…xml, excelでテストデータのセットアップや結果の検証ができる。設定用コードが多い、JUnit5に追従できておらず不便とのこと。
+・Database Rider…DBUnitの拡張版。(アノテーションで設定が楽、Springと連携しやすい。)
+・JDBCTestUtils
+・MockMvc…疑似リクエストでレスポンスをテストしたりできる。
+・他、spring-security-test, mybatis-spring-boot-starter-test
